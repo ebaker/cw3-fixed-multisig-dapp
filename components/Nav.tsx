@@ -2,6 +2,7 @@ import { useSigningClient } from 'contexts/cosmwasm'
 import Link from 'next/link'
 import Image from 'next/image'
 import ThemeToggle from 'components/ThemeToggle'
+import NavContractLabel from 'components/NavContractLabel'
 
 function Nav() {
   const { walletAddress, connectWallet, disconnect } = useSigningClient()
@@ -40,6 +41,7 @@ function Nav() {
             </a>
           </Link>
         </div>
+        <NavContractLabel />
         <ThemeToggle />
         <div className="flex flex-grow md:flex-grow-0 max-w-full">
           <button
