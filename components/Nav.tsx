@@ -14,6 +14,7 @@ function Nav() {
   }
 
   const PUBLIC_SITE_ICON_URL = process.env.NEXT_PUBLIC_SITE_ICON_URL || ''
+  const PUBLIC_SITE_TITLE = process.env.NEXT_PUBLIC_SITE_TITLE
 
   return (
     <div className="border-b w-screen px-2 md:px-16">
@@ -22,7 +23,12 @@ function Nav() {
           <Link href="/">
             <a>
               {PUBLIC_SITE_ICON_URL.length > 0 ? (
-                <Image src={PUBLIC_SITE_ICON_URL} height={32} width={32} />
+                <Image
+                  src={PUBLIC_SITE_ICON_URL}
+                  height={32}
+                  width={32}
+                  alt={`${PUBLIC_SITE_TITLE} Logo`}
+                />
               ) : (
                 <span className="text-2xl">⚛️ </span>
               )}
@@ -30,14 +36,16 @@ function Nav() {
           </Link>
           <Link href="/">
             <a className="ml-1 md:ml-2 link link-hover font-semibold text-xl md:text-2xl align-top">
-              {process.env.NEXT_PUBLIC_SITE_TITLE}
+              {PUBLIC_SITE_TITLE}
             </a>
           </Link>
         </div>
         <ThemeToggle />
-        <div className="flex flex-grow lg:flex-grow-0 max-w-full">
+        <div className="flex flex-grow md:flex-grow-0 max-w-full">
           <button
-            className="block btn btn-outline btn-primary w-full max-w-full truncate"
+            className={`block btn btn-outline btn-primary w-full max-w-full truncate ${
+              walletAddress.length > 0 ? 'lowercase' : ''
+            }`}
             onClick={handleConnect}
           >
             {walletAddress || 'Connect Wallet'}
