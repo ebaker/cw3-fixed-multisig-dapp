@@ -25,7 +25,7 @@ function ContractLabel() {
   }
 
   return (
-    <div className="flex">
+    <div className="flex items-center">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -40,7 +40,7 @@ function ContractLabel() {
         ></path>
       </svg>
       <Link href={`/${encodeURIComponent(multisigAddress)}`}>
-        <a className="capitalize hover:underline">{label}</a>
+        <a className="capitalize hover:underline text-2xl">{label}</a>
       </Link>
     </div>
   )

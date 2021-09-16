@@ -96,8 +96,7 @@ const CreateMultisig: NextPage = () => {
       max_voting_period,
     }
 
-    const label = formEl.label.value?.trim()
-    // console.log('create multisig: ', JSON.stringify(msg))
+    const label = formEl.label.value.trim()
 
     // @ebaker TODO: add more validation
     if (!validateNonEmpty(msg, label)) {
@@ -231,13 +230,13 @@ const CreateMultisig: NextPage = () => {
           <div className="text-right">
             <LineAlert variant="success" msg={`Success!`} />
             <button
-              className="mt-4 box-border px-4 py-2 rounded bg-green-500 hover:bg-green-600 text-white"
+              className="mt-4 box-border px-4 py-2 btn btn-primary"
               onClick={(e) => {
                 e.preventDefault()
                 router.push(`/${encodeURIComponent(contractAddress)}`)
               }}
             >
-              View Multisig
+              View Multisig &#8599;
             </button>
           </div>
         )}

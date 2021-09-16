@@ -34,17 +34,22 @@ const icons = {
 function LineAlert({
   variant,
   msg,
-  className,
+  className = '',
 }: {
   variant: 'success' | 'error'
   msg: string
   className?: string
 }) {
+  const alertClassName = [
+    'alert',
+    variant === 'success' ? 'alert-success' : 'alert-error',
+    className,
+  ].join(' ')
   return (
-    <div className={`alert alert-${variant} ${className}`}>
+    <div className={alertClassName}>
       <div className="flex-1 items-center">
         {icons[variant]}
-        <label className="flex-grow break-all">{msg}</label>
+        <label className="flex-grow break-all text-center">{msg}</label>
       </div>
     </div>
   )

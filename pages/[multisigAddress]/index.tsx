@@ -25,6 +25,8 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     if (walletAddress.length === 0 || !signingClient) {
+      setReversedProposals([])
+      setHideLoadMore(false)
       return
     }
     setLoading(true)

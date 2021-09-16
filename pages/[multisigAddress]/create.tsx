@@ -115,19 +115,19 @@ const ProposalCreate: NextPage = () => {
             <h1 className="text-4xl my-8 text-bold">Create Proposal</h1>
             <label className="block">Title</label>
             <input
-              className="border border-black rounded box-border p-3 w-full input input-bordered focus:input-primary text-xl"
+              className="input input-bordered rounded box-border p-3 w-full focus:input-primary text-xl"
               name="label"
               readOnly={complete}
             />
             <label className="block mt-4">Description</label>
             <textarea
-              className="border border-black rounded box-border p-3 h-24 w-full input input-bordered focus:input-primary text-xl"
+              className="input input-bordered rounded box-border p-3 h-24 w-full focus:input-primary text-xl"
               name="description"
               readOnly={complete}
             />
             <label className="block mt-4">JSON</label>
             <textarea
-              className="border border-black rounded box-border p-3 w-full font-mono h-80 input input-bordered focus:input-primary text-x"
+              className="input input-bordered rounded box-border p-3 w-full font-mono h-80 focus:input-primary text-x"
               cols={7}
               name="json"
               readOnly={complete}
@@ -157,13 +157,13 @@ const ProposalCreate: NextPage = () => {
                   msg={`Success! Transaction Hash: ${transactionHash}`}
                 />
                 <button
-                  className="mt-4 box-border px-4 py-2 rounded bg-green-500 hover:bg-green-600 text-white"
+                  className="mt-4 box-border px-4 py-2 btn btn-primary"
                   onClick={(e) => {
                     e.preventDefault()
                     router.push(`/${multisigAddress}/${proposalID}`)
                   }}
                 >
-                  View Proposal
+                  View Proposal &#8599;
                 </button>
               </div>
             )}
