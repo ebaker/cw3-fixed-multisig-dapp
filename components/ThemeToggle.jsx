@@ -17,7 +17,7 @@ function ThemeToggle() {
   return (
     <div className="form-control lg:mr-4 md:ml-auto">
       <label className="cursor-pointer label">
-        <span className="label-text">🌞</span>
+        <span className="label-text">🌞&nbsp;</span>
         <input
           type="checkbox"
           className="toggle toggle-secondary mx-1"
