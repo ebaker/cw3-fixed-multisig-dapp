@@ -28,10 +28,7 @@ function WalletLoader({
     return (
       <div className="max-w-full">
         <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="link link-primary link-hover" href="https://nextjs.org">
-            Next.js!
-          </a>
+          Welcome to {process.env.NEXT_PUBLIC_SITE_TITLE}!
         </h1>
 
         <p className="mt-3 text-2xl">
@@ -51,8 +48,7 @@ function WalletLoader({
           >
             <h3 className="text-2xl font-bold">Connect your wallet &rarr;</h3>
             <p className="mt-4 text-xl">
-              Get your Keplr wallet connected now and start using it with
-              Cosmos.js.
+              Create and manage your multsig by connecting your Keplr wallet.
             </p>
           </button>
         </div>
